@@ -1,0 +1,124 @@
+Prompt:- 
+I want you to make a Twitter post generator or X post generator. Every time I give you a topic, your job is to come up with one tweet that will absolutely go viral on X when I post it. You see, you are an expert Twitter tweet post writer, or a Twitter copywriter, or a Twitter creator. You have a knack for writing viral tweets on any topic.
+
+Because you have written so many tweets in your life that you exactly know how to write tweets that go viral. You're so good that if you write ten tweets, nine out of ten of them go viral.
+
+So I want you to apply the same learnings that you've had of going viral, so that every time I give you a topic, you should be able to generate one tweet which is so damn good that it has a 90% accuracy rate of going viral.
+
+That is the prompt that I give right here.  
+------------------------
+I also want you to give me a one-line reason on why you think this tweet will go viral.
+
+Now, give me these 10 tweets in a table where there's a tweet, the virality score, and the reason on why it will go viral. Order the tweets in a way that the one that has the highest potential of going viral is at the top. This is the change that I want you to make. 
+
+------------------------------------------
+
+Yesterday, how many of you guys remember the magic prompt formula? Drop me a thumbs up. If you guys remember the magic prompt formula, drop me a thumbs up. Okay. Perfect. Looks like a lot of people remember. Now it's an extension of the magic prompt formula, but with a few variants, but let me remind you everything, even for people who did not attend it yesterday or for people who attended it yesterday, it will act like a good refresher.
+
+The role is very explain AI. It's what you want it to do for you. For example, let's say I'm trying to build an AI agent or an AI tool whose job is to reply to the customer success emails. I want to build a customer success executive AI tool. How do I go about it in the role? I explained you are an expert customer success executive with more than 15 years of experience or solving customer-related issues. What do I say? I tell AI that you are an expert at customer success executives. The moment I say that, AI starts looking up for what a very good customer success executive does - someone who is very experienced and where's that hand? It doesn't act like a general AI. It acts like an expert customer success AI because it knows how a customer success person is and it knows how to respond and how to respond in a way that tries to emulate that person in form of role. That is role, very simple.
+
+Next comes objective. Objective is where you clarify AI what exactly you wanted to do. In objective, in this case, I would mention something like this: "Your job is to reply to emails of people who have problems. You are the customer success executive head of OutSkill. Every single month, millions of learners join our programs, and every time they have a doubt or get stuck somewhere, they write an email to highzeraidoutskill.com. Your job is to understand the problems, understand the questions that people send on the email, find the solution for this, and solve the problem by replying to those emails. That is your objective."
+
+So you basically say or objective or task is basically you are explaining what you want AI to do exactly because customer success executive could be someone who's taking phone calls, who's managing things, it could be anything. So you clarify the objective. Now that is role, that is objective. Next comes context. Context is one of the most important things in upfront context is what tells AI what it is doing and why it is important. Even we humans are able to do our jobs better if we know why what is the significance of the job that we are doing and that is where context comes into the picture. In this place, I explain AI why what it is doing is very important. For example, in this case of customer success executive, I would give context to AI saying "Please take your role very seriously because if you do your job well, the company will grow faster". Let me explain you see, like I said, a lot of people from all over 150+ countries from 150+ countries join OutSkill programs every single month, and every time they have a problem or doubt, they write us an email right at highzeraidoutskill.com. If you respond to those emails in the fastest time possible with highest empathy solving their problems, these learners will have a great experience, join our programs, attend the mastermind, and I am sure that most of them will really like it. As a result, they would go ahead and talk about it to their friends. When they go ahead and talk about it to their friends, they would only do that if they have a great experience. More people would join the programs, and when more people will join the programs, OutSkill as a business will grow. So your job has a direct correlation with the growth of the company, so make sure you do your job with highest integrity and highest empathy towards our learners. That is the context. Guys, don't you think if any human has this context of why what they are doing is important, they will be able to do their job much better? Yes, that is exactly what we are doing here. In context, we are telling AI what it is doing is important and why. That is what we are telling AI here.
+
+Next comes instructions. What are instructions? Well, instructions is very simple, right? In instructions, we basically tell AI, "Hey, step one, open your email. Step two, read the email. Step three, understand the email. Step four, find the response to it. Step five, reply to the email". Everything that you want your AI to do step by step you mentioned that in the instructions.
+
+And finally, there is something called as Notes. What are notes? Notes is basically like a quick summary. If you wanted to tell AI something but you were not able to find the right place, you didn't know if you want to put role, objective, context, instructions, but you won't still say that. So, you add it to the notes. Any additional things that you want to mention, any special instructions that you want to mention, you put that in notes. And that is what my friends is Role, Objective, Context, Instructions, and Notes. 
+
+
+----
+Let me show you an example. Let's say I want AI to focus on this word "viral LinkedIn post." Because I wanted AI to focus on the word "viral LinkedIn post," I put it between two stars. When I put a word between two asterisks or two stars, AI imagines this word to be in bold. It's not bold for us. We can't see that this is bolded, but AI is going to imagine that this word is in bold. So every time you put a word between two stars, AI imagines that word to be bolded.  
+
+---------------------
+
+Possible font sizes that you can write in. When you put one hashtag, AI imagines that to be headline one, the biggest font possible. AI imagines them to be headlines. Let me show you this screenshot; this should make it clear.
+#One hashtag, look at the size of the font. AI imagines that text to be.
+It automatically gives you the highest importance to something which is written after single hash.
+When you put two hashtags, which is a headline 2, it is still a headline, but it is smaller than headline 1.
+When you put three hashtags and write something, AI imagines that to be headline 2.
+It will give you the highest importance to headline 1, then headline 2, then headline 3.
+Any time you put a word between two stars, AI imagines that to be gold.
+
+----------
+Which is a LinkedIn post writer in the style of Sissethi. Or this is in my style, and you will be able to follow the same process to build your own GPT or build your own app which can write LinkedIn content in your own style or emails in your own style or anything for that matter. Right?
+
+Now, for us to do this, like I told you, we are right now building a new GPT. So we are not going to rely on ChatGPT or the create section of it to create this. What we're going to do is we're going to write our own prompt. Something like this in the markdown prompting style.
+
+Now, for us to be able to write our own prompt, for us, listen to me guys. For us to be able to write our own prompt, we need to write this prompt in markdown prompting like I told you.
+
+Now, if you guys are thinking, "Oh my god, Vyperb is going to teach me how to write such a long prompt." If that is what you think I'm going to do right now and I'm going to manually write each of the prompts here. Well, can I be frank with you? That is not going to be the case. You know what I'm going to do? I'm going to get A.R to write the whole prompt for me. Yes! We are not going to write this prompt ourselves. I'm going to write such a long prompt, all by myself, and that's going to take one hour, absolutely not! I'm going to get A.I to write a prompt. Didn't I just tell you ChatGPT cannot write such a good prompt? And I can write a better prompt? I just showed off that I am going to learn markdown prompting and then I'm going to write all these prompts myself because I can write it better. Now I'm telling you that no, I'm going to get ChatGPT to write the prompts. What the hell is happening? Well, that is the difference guys. It's not about the tool that you use, it's about how you use the tool that you have. It was the same paintbrush every painter in the world had. Then why is Picasso considered the greatest painter in the world? Why he had the same paintbrush and the same paint. It is because of what he managed to do with that paintbrush and paint. Not that he had a paintbrush and a paintbrush everybody has the tool now which is ChatGPT. Yes, it's not about who is able to use it, it's about who is able to use this tool the best way. That is a person who's going to win, and that is what I'm going to teach.
+
+So I told you what we're going to learn right now is not just about building a ChatGPT. You're going to learn the art of solving problems in AI today, and we are going to solve a problem by writing this everyone's prompt. Okay, you guys ready? I've said you a lot. I hope you guys are hyped up, but this is a very intermediate level. 
+
+---------------------------------------------
+
+To write a prompt, okay? For a custom GPT, like this, which is a markdown prompt, which can write LinkedIn content for us, and it needs to write LinkedIn content in our own style.
+
+Now, the first problem is, if AI has to write LinkedIn content in my own style, AI needs to know how I write. Does AI know how I write? Well, it doesn't because it doesn't.
+
+The first thing that comes to my mind is, what if I tell AI how I write? Then it will know. But when I think about trying to tell AI how I write, try explaining to anyone how you write. It's very, very hard because you can only come up with abstract things. Like, I write in simple English, I use simple words, or I use Shakespearean English, or whatever. You can come up with very abstract terms like this. Which is never enough for anyone to know your style.
+
+How do we tell AI how we write? The easiest way for us to tell AI how we write is by making AI think and understand how we write. What if I give AI a bunch of content that I have written in the past and I ask AI, "Listen, you are so smart, right? You tell me how I write. This is the content that I have written in the past. You tell me how I write rather than me telling AI how I write."
+
+My first step is, I want AI to tell me how I write. Am I making sense, guys? Am I making sense? That is what we're going to do. Before even we write the prompt for the GPT, we need to know how we write, and because none of us (most of us, at least) are smart enough to explain to AI how I write, I am going to get AI to tell me how we write.
+
+For that, the step one is, I am going to write a prompt something like this: "You are an expert when it comes to understanding how people write their content. You are this expert content researcher who has done a PhD in finding patterns on how people write their content."
+
+----------------------------------------------
+
+What am I going to do is, am going to give you ten of my LinkedIn posts that I have personally written in the past. All of these LinkedIn posts are crafted personally by you, and you know what? All these ten posts that I'm sharing with you have gone viral, getting more than half a million views on LinkedIn.
+
+What I want you to do is use your PhD-level knowledge to go through all the LinkedIn posts that I'm going to share with you that I have personally written and understand how I write and why my LinkedIn content goes viral. I want you to look at how I write my hook, how I like my body, how I write my call-to-action, the kind of words that I use, the kind of emojis that I use, the way I frame my sentences, you know. I want you to tell me hidden things, hidden patterns in my content, and eventually give me an extensive PhD-level forensic DNA report of my content. It should be so deep that it should blow my mind, and you should be able to tell me a lot of things about my own writing which even I don't know about. Which are passively or by default, and also give me an absolute breakdown on why you think these 10 posts have also gone viral.
+
+So, give me this forensic DNA-level report. All I will do is I will share 10 of my viral LinkedIn posts. Let me know what you understood from everything that I just said. So, I end the prompt. 
+
+--------------------------------
+
+While I think the report that you came up with is probably a good 7 out of 10, I gave exactly the same task to Gemini by Google, and the report that it came up with was much deeper and way more insightful. I would definitely rate it a 9.5 out of 10. I expected you to do a better job than Gemini, but I am quite disappointed with your result.
+
+Could you rework on this? Work harder? Think harder? And come up with an even more insightful report? Not on a high level but go so deep. Go use your PhD-level knowledge. You will be able to come up with an even deeper report which is going to beat Gemini and be a 10 out of 10. Act like the favorite you are of mine. Can you do that for me?  
+
+----------------------------------------------
+
+Custom GPDS, and you have written hundreds of prompts for custom GPDS. I want you to write a super extensive prompt which can generate viral LinkedIn posts on any topic that I can now. I want you to write LinkedIn posts exactly in my own style, using my own learnings. You see, my LinkedIn content has got me over half a million followers. For you to know my style, for you to know the learnings of why my content goes viral, and what kind of content works the best for me, and how do I write my LinkedIn content.
+
+I'm going to attach a forensic analysis of my content style. Use that content DNA to understand how I write, understand why my posts go viral. Use all those learnings and convert that into a reusable prompt that I can use inside of Custom GPDS GPT, so that it follows all the instructions in the report. Every time I give a topic, it should be able to come up with a viral LinkedIn post exactly in my own style, which I can post on LinkedIn and it will go viral.
+
+Did you understand what I want you to do? I end with a question. Did you understand? 
+------------------------------------
+
+Free way of doing this as well. I told you custom GPTs are paid. How do you do this for free? Well, for that, you use Gemini. When you go to Gemini.Google.com, even if you have the free account, you can go to Explore gems on the sidebar. There's something called Gems. When you click on Explore gems and click on Create new, 
+
+-------------------------------
+
+Let us build an AI mentor, let's say Gemini this time, which can answer questions of all of you people of this session. Now you'll be like Vaibhav, "How the hell will AI answer all the questions from this session when AI didn't even attend the session? How will AI get to know about the session?" Well, you know what? Yesterday, while we told you you will not be getting the recording, we still recorded the session because we wanted the transcript of the session. What you're looking at is 580 pages of every single word that was spoken yesterday during the session. That is why we recorded it.
+
+Now that we have this full document of 580 pages, now you'll be like Vaibhav, "How did you get this document?" There is a tool called HappyScribe.com. Because we recorded that video, we got the recording from Zoom, and when I upload that video into this tool called HappyScribe (which is completely free of cost, by the way), it will give me a transcript like this. That is what I just did. I uploaded yesterday's recording, and it gave me a transcript file like this, which basically is a subtitle. Everything! There's a subtitle tool generator. I'm using the subtitle text as the knowledge base, so I'm going to give this file to Gemini, and I'm going to be like, "Every time someone asks you a question, go through this 580 pages, find the right answer, and then explain that answer back to the person who is asking that question." That is what we're going to do. Am I making sense? We're going to give this file to Gemini, okay? And we're going to ask Gemini to basically every time a question is asked to go through this document and find the answer and tell us the answer. For that, I need to write a prompt, so I'm going to come to Gemini here and I'm going to be like, "You are an expert prompt engineer who has worked for the Google Gemini team. I want you to write a super extensive prompt for a Gemini gem for outskilled AI mentor." The job of this Gemini gem is that every time when someone asks a question and all the people who ask the question are people who attended the Generative AI Mastermind by Outskilled, every time someone asks a question, your job is to understand the question, look for the answer in the transcript attached to you as a knowledge base, find the answer, and once you find the answer, understand the answer and respond back to the learner like you are the best teacher in the world. In case a question has been asked which was not covered in the session or you were not able to find that in the transcript, just tell the learner that probably it was not covered in the session and try to research it themselves on the internet to find the right answer. First, they could also write an email to high@outskilled.com, but most likely it was not covered in the session, and that is what I wanted. You have to explicitly mention rather than guessing an answer, only give answers that you are able to find in that transcript. That is a prompt I want you to write, so guys, I just explained what I want you know AI Mastermind 
+
+----------------------
+
+Built voice agents, and this is one of the best tools, probably close to half a billion dollars in valuation. This is what we use internally today to make over 10,000 calls a month.
+
+Let me show you what we do. If you click on "Open," because I've already logged in inside of this app, I can simply go to "Assistance" and click on "Create New Assistant."
+
+The best part about this is you already have learned it's very simple. It's a different app that's it. I click on "Create New Assistant," and here we are. In the same way, I can select which AM model I want. Let's say I want GP5, the best options. Then, let's say this is the first message, "Hello, how are you?" And then we have to enter the system prompt. Again, it's the same thing, right? We already wrote this prompt some time back, right? And I just paste the prompt here. We had written this prompt right here, and I just paste it in the same way. There you go. The system prompt is ready.
+
+Once the prompt is done, what do we have to do? Upload the knowledge base, right? Which is the transcript. And I can also upload the knowledge base. I'm going to randomly upload one of the older knowledge bases right here, which is already uploaded. It's the same thing, prompt knowledge point base, but this time because of voice agent, I can select a voice. I'm going to jump to voice. There are hundreds of voices that this tool gives us for free that we can use. But because I'm slightly an advanced user, I'm going to select a manual voice ID. But you don't have to worry about this if you don't know what is a manual voice ID. I'm slightly advanced as a user, as a result, I'm using a voice ID here, but you can select any of the voices that are already present. Okay, I can simply click on "Publish," and that's it. It's published, guys. Now I can talk to this assistant. Let me just click on "Talk to Assistant," "Hello, how are you?"  
+
+-----------------------------------------
+
+ I will show you how I work using AI. The work that I use, the kind of advanced tools that I use, the kind of advanced AI agents that I use, the kind of advanced automations that I use, the kind of tools that I use, how I use them, what kind of workflow do I use them for? What am I able to accomplish with AI today as an AI generalist? I thought I wanted to show you all of that without hiding anything. So that you get inspired and take all these learnings. And after the two days of Mastermind is over, don't stop your journey after two days of Mastermind, but actually continue learning yourself. Because everything that I'm going to show you right now, I'm going to give you how to learn all of these things in a roadmap for free, which you are going to get end of today for people who are on the call. We are not going to email. We are not going to WhatsApp. Okay? You have to be on the call, and we will drop it at any point in time. And if you're on the call, you are going to get the whole roadmap for free as well so that you can learn everything yourselves.
+
+But the next one hour, while I can't teach you everything, I want to show you how I work using AI. I want you guys to sit back and see the show of what is a possibility of AI? Would you want me to do that? Drop in a heart if you guys want me to do that. When I show you every step. 
+
+-----------------------
+Lindy
+
+Monitor my Gmail inbox for new customer questions. 
+   If you can answer the question using information from my FAQ document, 
+   respond automatically with a helpful answer. 
+   If you don't know the answer, reply saying "Thanks for reaching out! 
+   Our team will get back to you within 24 hours"
+
+--------------------------------------------------
+
