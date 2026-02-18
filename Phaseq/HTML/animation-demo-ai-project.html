@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Tutorial - Complete Guide</title>
+    <style>
+        /* Basic Reset and Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: #fff;
+            margin: 40px 0 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+        }
+        
+        h3 {
+            color: #ffd700;
+            margin: 20px 0 10px;
+        }
+        
+        p, li {
+            color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background: #2d2d2d;
+            color: #98c379;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            border-left: 4px solid #ffd700;
+        }
+        
+        .concept-box {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        /* Example 1: Basic Fade Animation */
+        .fade-box {
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            margin: 20px 0;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out infinite;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.2;
+            }
+        }
+        
+        /* Example 2: Moving Animation */
+        .move-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            border-radius: 50%;
+            margin: 20px 0;
+            animation: moveRight 3s ease-in-out infinite;
+        }
+        
+        @keyframes moveRight {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(300px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        
+        /* Example 3: Rotating Animation */
+        .rotate-box {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #a29bfe, #6c5ce7);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 15px;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Example 4: Scaling Animation */
+        .scale-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            animation: scaleUp 2s ease-in-out infinite;
+        }
+        
+        @keyframes scaleUp {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.5);
+            }
+        }
+        
+        /* Example 5: Color Changing Animation */
+        .color-box {
+            width: 150px;
+            height: 80px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            animation: colorChange 3s ease-in-out infinite;
+        }
+        
+        @keyframes colorChange {
+            0% {
+                background: #ff6b6b;
+            }
+            25% {
+                background: #feca57;
+            }
+            50% {
+                background: #48dbfb;
+            }
+            75% {
+                background: #1dd1a1;
+            }
+            100% {
+                background: #ff6b6b;
+            }
+        }
+        
+        /* Example 6: Combined Animation */
+        .combined-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff9ff3, #f368e0);
+            margin: 20px 0;
+            border-radius: 15px;
+            animation: combined 3s ease-in-out infinite;
+        }
+        
+        @keyframes combined {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+                background: #ff9ff3;
+            }
+            25% {
+                transform: translateX(100px) rotate(90deg) scale(1.2);
+                background: #feca57;
+            }
+            50% {
+                transform: translateX(200px) rotate(180deg) scale(1);
+                background: #48dbfb;
+            }
+            75% {
+                transform: translateX(100px) rotate(270deg) scale(0.8);
+                background: #1dd1a1;
+            }
+            100% {
+                transform: translateX(0) rotate(360deg) scale(1);
+                background: #ff9ff3;
+            }
+        }
+        
+        /* Example 7: Animation with Animation Properties */
+        .custom-animation {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            margin: 20px 0;
+            border-radius: 50%;
+            animation: custom 2s ease-in-out 1s 3 alternate;
+        }
+        
+        @keyframes custom {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+            }
+        }
+        
+        /* Example 8: Hover Animation */
+        .hover-box {
+            width: 150px;
+            height: 80px;
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .hover-box:hover {
+            transform: scale(1.2) rotate(10deg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        /* Example 9: Loading Spinner */
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-top: 5px solid #ffd700;
+            border-radius: 50%;
+            margin: 20px 0;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Example 10: Pulse Animation */
+        .pulse {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #eb3b5a, #fa8231);
+            border-radius: 50%;
+            margin: 20px 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(235, 59, 90, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 20px rgba(235, 59, 90, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(235, 59, 90, 0);
+            }
+        }
+        
+        /* Example 11: Bounce Animation */
+        .bounce {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #7efff5, #7efff5);
+            border-radius: 50%;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            font-weight: bold;
+            animation: bounce 1s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-150px);
+            }
+        }
+        
+        /* Example 12: Text Animation */
+        .text-animate {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            margin: 20px 0;
+            animation: textGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255,215,0,0.8), 0 0 60px rgba(255,215,0,0.6);
+            }
+        }
+        
+        /* Display containers */
+        .demo-area {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            min-height: 200px;
+        }
+        
+        .code-display {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+        
+        .property-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .property-table th, .property-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .property-table th {
+            background: rgba(255,255,255,0.2);
+            color: #ffd700;
+        }
+        
+        .property-table td {
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 CSS Animation Complete Guide</h1>
+        
+        <!-- Introduction -->
+        <div class="concept-box">
+            <h2>What is CSS Animation?</h2>
+            <p>CSS Animation is a technique that allows you to create dynamic, engaging visual effects on web pages without using JavaScript. It enables HTML elements to transition from one style to another over a specified duration.</p>
+            <p>CSS animations can animate transitions from one CSS style configuration to another. Animations consist of two components: a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation.</p>
+        </div>
+        
+        <!-- Key Concepts -->
+        <h2>🔑 Key Concepts</h2>
+        
+        <div class="concept-box">
+            <h3>1. @keyframes Rule</h3>
+            <p>The <code>@keyframes</code> rule is the foundation of CSS animations. It defines the animation sequence by specifying styles at various points during the animation. You can define multiple keyframes using percentage values (0% to 100%).</p>
+            <pre>
+@keyframes animationName {
+    0% { 
+        /* starting style */
+    }
+    50% {
+        /* middle style */
+    }
+    100% {
+        /* ending style */
+    }
+}</pre>
+        </div>
+        
+        <div class="concept-box">
+            <h3>2. Animation Properties</h3>
+            <table class="property-table">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Example Values</th>
+                </tr>
+                <tr>
+                    <td><code>animation-name</code></td>
+                    <td>Specifies the name of the @keyframes</td>
+                    <td>fadeIn, moveRight, rotate</td>
+                </tr>
+                <tr>
+                    <td><code>animation-duration</code></td>
+                    <td>How long the animation takes (seconds/s or milliseconds/ms)</td>
+                    <td>2s, 500ms</td>
+                </tr>
+                <tr>
+                    <td><code>animation-timing-function</code></td>
+                    <td>Speed curve of the animation</td>
+                    <td>ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier()</td>
+                </tr>
+                <tr>
+                    <td><code>animation-delay</code></td>
+                    <td>Delay before animation starts</td>
+                    <td>1s, -1s (negative starts immediately)</td>
+                </tr>
+                <tr>
+                    <td><code>animation-iteration-count</code></td>
+                    <td>How many times to repeat</td>
+                    <td>1, 2, 3, infinite</td>
+                </tr>
+                <tr>
+                    <td><code>animation-direction</code></td>
+                    <td>Direction of animation playback</td>
+                    <td>normal, reverse, alternate, alternate-reverse</td>
+                </tr>
+                <tr>
+                    <td><code>animation-fill-mode</code></td>
+                    <td>Style when animation is not playing</td>
+                    <td>none, forwards, backwards, both</td>
+                </tr>
+                <tr>
+                    <td><code>animation</code></td>
+                    <td>Shorthand for all properties</td>
+                    <td>name duration timing-function delay iteration-count direction</td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Timing Functions -->
+        <div class="concept-box">
+            <h3>3. Animation Timing Functions</h3>
+            <p>Timing functions define how the animation progresses through time:</p>
+            <ul>
+                <li><code>ease</code> - Starts slow, speeds up, then slows down (default)</li>
+                <li><code>linear</code> - Constant speed throughout</li>
+                <li><code>ease-in</code> - Starts slow, speeds up at the end</li>
+                <li><code>ease-out</code> - Starts fast, slows down at the end</li>
+                <li><code>ease-in-out</code> - Slow start, fast middle, slow end</li>
+                <li><code>cubic-bezier(n,n,n,n)</code> - Custom bezier curve</li>
+                <li><code>steps(n)</code> - Jump animation in n steps</li>
+            </ul>
+        </div>
+        
+        <!-- Live Examples -->
+        <h2>🚀 Live Animation Examples</h2>
+        
+        <!-- Example 1: Fade Animation -->
+        <div class="concept-box">
+            <h3>Example 1: Fade In/Out Animation</h3>
+            <p>This example demonstrates opacity animation - the box fades in and out repeatedly.</p>
+            <div class="demo-area">
+                <div class="fade-box">Fade Animation</div>
+            </div>
+            <div class="code-display">
+<pre>
+.fade-box {
+    animation: fadeIn 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 2: Moving Animation -->
+        <div class="concept-box">
+            <h3>Example 2: Moving Animation (Translate)</h3>
+            <p>This example shows horizontal movement using transform: translateX()</p>
+            <div class="demo-area">
+                <div class="move-box"></div>
+            </div>
+            <div class="code-display">
+<pre>
+.move-box {
+    animation: moveRight 3s ease-in-out infinite;
+}
+
+@keyframes moveRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(300px); }
+    100% { transform: translateX(0); }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 3: Rotating Animation -->
+        <div class="concept-box">
+            <h3>Example 3: Rotating Animation</h3>
+            <p>Using transform: rotate() to create continuous rotation</p>
+            <div class="demo-area">
+                <div class="rotate-box">Rotate</div>
+            </div>
+            <div class="code-display">
+<pre>
+.rotate-box {
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 4: Scaling Animation -->
+        <div class="concept-box">
+            <h3>Example 4: Scaling Animation</h3>
+            <p>Using transform: scale() to make elements grow and shrink</p>
+            <div class="demo-area">
+                <div class="scale-box">Scale</div>
+            </div>
+            <div class="code-display">
+<pre>
+.scale-box {
+    animation: scaleUp 2s ease-in-out infinite;
+}
+
+@keyframes scaleUp {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 5: Color Changing Animation -->
+        <div class="concept-box">
+            <h3>Example 5: Color Changing Animation</h3>
+            <p>Animating background-color through multiple colors</p>
+            <div class="demo-area">
+                <div class="color-box">Color Change</div>
+            </div>
+            <div class="code-display">
+<pre>
+.color-box {
+    animation: colorChange 3s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+    0% { background: #ff6b6b; }
+    25% { background: #feca57; }
+    50% { background: #48dbfb; }
+    75% { background: #1dd1a1; }
+    100% { background: #ff6b6b; }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 6: Combined Animation -->
+        <div class="concept-box">
+            <h3>Example 6: Combined Multiple Animations</h3>
+            <p>Combining translate, rotate, scale, and color changes in one animation</p>
+            <div class="demo-area">
+                <div class="combined-box"></div>
+            </div>
+            <div class="code-display">
+<pre>
+.combined-box {
+    animation: combined 3s ease-in-out infinite;
+}
+
+@keyframes combined {
+    0% {
+        transform: translateX(0) rotate(0deg) scale(1);
+        background: #ff9ff3;
+    }
+    25% {
+        transform: translateX(100px) rotate(90deg) scale(1.2);
+        background: #feca57;
+    }
+    50% {
+        transform: translateX(200px) rotate(180deg) scale(1);
+        background: #48dbfb;
+    }
+    75% {
+        transform: translateX(100px) rotate(270deg) scale(0.8);
+        background: #1dd1a1;
+    }
+    100% {
+        transform: translateX(0) rotate(360deg) scale(1);
+        background: #ff9ff3;
+    }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 7: Custom Animation Properties -->
+        <div class="concept-box">
+            <h3>Example 7: Custom Animation Properties</h3>
+            <p>Using shorthand: name | duration | timing-function | delay | iteration-count | direction</p>
+            <div class="demo-area">
+                <div class="custom-animation"></div>
+            </div>
+            <div class="code-display">
+<pre>
+.custom-animation {
+    animation: custom 2s ease-in-out 1s 3 alternate;
+}
+
+@keyframes custom {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+    }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 8: Hover Animation (Transitions) -->
+        <div class="concept-box">
+            <h3>Example 8: Hover Animation (CSS Transitions)</h3>
+            <p>Animations on hover using CSS transitions - mouse over the box!</p>
+            <div class="demo-area">
+                <div class="hover-box">Hover Me!</div>
+            </div>
+            <div class="code-display">
+<pre>
+.hover-box {
+    transition: all 0.3s ease;
+}
+
+.hover-box:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    cursor: pointer;
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 9: Loading Spinner -->
+        <div class="concept-box">
+            <h3>Example 9: Loading Spinner</h3>
+            <p>A common use case - creating a loading spinner</p>
+            <div class="demo-area">
+                <div class="spinner"></div>
+            </div>
+            <div class="code-display">
+<pre>
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid #ffd700;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 10: Pulse Animation -->
+        <div class="concept-box">
+            <h3>Example 10: Pulse Animation</h3>
+            <p>Often used for notifications or attention-grabbing elements</p>
+            <div class="demo-area">
+                <div class="pulse"></div>
+            </div>
+            <div class="code-display">
+<pre>
+.pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(235, 59, 90, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(235, 59, 90, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(235, 59, 90, 0);
+    }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 11: Bounce Animation -->
+        <div class="concept-box">
+            <h3>Example 11: Bounce Animation</h3>
+            <p>Creating a bouncing ball effect</p>
+            <div class="demo-area">
+                <div class="bounce">Bounce</div>
+            </div>
+            <div class="code-display">
+<pre>
+.bounce {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-150px); }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Example 12: Text Animation -->
+        <div class="concept-box">
+            <h3>Example 12: Text Glow Animation</h3>
+            <p>Creating animated text with glow effects</p>
+            <div class="demo-area">
+                <div class="text-animate">✨ Glowing Text ✨</div>
+            </div>
+            <div class="code-display">
+<pre>
+.text-animate {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255,215,0,0.8), 
+                     0 0 60px rgba(255,215,0,0.6);
+    }
+}</pre>
+            </div>
+        </div>
+        
+        <!-- Summary -->
+        <div class="concept-box">
+            <h2>📋 Summary</h2>
+            <p>CSS Animations provide a powerful way to add motion and interactivity to your web pages. Key takeaways:</p>
+            <ul>
+                <li><strong>@keyframes</strong> defines the animation sequence with start, middle, and end states</li>
+                <li><strong>animation properties</strong> control timing, duration, direction, and repetition</li>
+                <li><strong>transform</strong> properties (translate, rotate, scale) create movement effects</li>
+                <li><strong>transitions</strong> are simpler and work on hover/active states</li>
+                <li><strong>Combine animations</strong> for complex effects</li>
+                <li><strong>Use negative delay</strong> to start animation from middle</li>
+                <li><strong>animation-fill-mode: forwards</strong> keeps the final state after animation ends</li>
+            </ul>
+        </div>
+        
+        <!-- Tips -->
+        <div class="concept-box">
+            <h2>💡 Pro Tips</h2>
+            <ul>
+                <li>Use <code>will-change: transform, opacity;</code> for performance optimization</li>
+                <li>Prefer transforms over changing left/top/right/bottom for smoother animations</li>
+                <li>Use <code>animation-direction: alternate</code> for smooth back-and-forth motion</li>
+                <li>Combine with CSS variables for reusable animations</li>
+                <li>Use cubic-bezier() for custom timing functions</li>
+                <li>Consider reduced motion preferences for accessibility</li>
+            </ul>
+        </div>
+    </div>

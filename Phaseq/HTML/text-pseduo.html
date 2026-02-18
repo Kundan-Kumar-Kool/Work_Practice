@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- pseudo class here. -->
+    <style>
+        p::first-line{
+            text-decoration: underline;
+            color: rgb(47, 255, 158);
+            font-size: large;
+            text-indent: 30px;
+        }
+        p.noline::first-line{
+            text-decoration: none;
+            color: purple;
+        }
+        p::before{
+            content: "";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-image: url("resources/image.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p> Hi what is the work that need more focus and attention in the life. That needs to be done 
+        in the world with full foucs and attention in the life. Just do it work  on it have a good day 
+        ahead.
+    </p>
+    <p class="noline">
+        Ok, Go ahead How do u get this, could u pls tell me more about this?
+    </p>
+</body>
+</html>

@@ -28,23 +28,55 @@
       input[type="checkbox"] {
         accent-color: red;
       }
-      input[type="text"]{
+      input[type="text"] {
         height: 40px;
         width: 300px;
         color: #000;
       }
       /* Grouping selectors */
-      a,p{
+      a,
+      p {
         color: rebeccapurple;
         width: 50%;
       }
       /* descendant selectors */
-      div p{
+      div p {
         background-color: aquamarine;
       }
       /* child selector */
-      ol >li{
+      ol > li {
         background-color: greenyellow;
+      }
+      /* pseduo selectors */
+      /* here we are performing tag and it's link here. */
+      a:link {
+        color: red;
+        font-size: 20px;
+        text-shadow: 2px 1px 0.5px gray;
+      }
+      a:visited {
+        color: green;
+        font-size: 10px;
+        text-shadow: none;
+      }
+      a:hover {
+        color: orange;
+        font-size: 30px;
+      }
+      a:active {
+        color: black;
+        background-color: blueviolet;
+      }
+      a:focus {
+        color: purple;
+      }
+      div > p:first-child {
+        font-size: large;
+        font-weight: 200;
+        text-indent: 50px;
+      }
+      div>p:nth-child(2){
+        color: red;
       }
     </style>
   </head>
@@ -66,24 +98,29 @@
     <input type="checkbox" name="check" />c1
     <input type="checkbox" name="check" />c2
     <input type="checkbox" name="check" />c3
-    <br>
-    <input type="text" name="text-area">
+    <br />
+    <input type="text" name="text-area" />
 
-    <hr>
-    <div>Div1
-        <p>What a day, how it is going?</p>
+    <hr />
+    <div>
+      Div1
+      <p>What a day, how it is going?</p>
     </div>
-    <hr>
+    <hr />
     <ol>
-        <li>Car</li>
-        <li>book</li>
-        <ol> 
-            <div>
-            <li>water</li>
-            <li>Good</li>
-            </div>
-        </ol>
-        <a href="abc.a">New link</a>
+      <li>Car</li>
+      <li>book</li>
+      <ol>
+        <div>
+          <li>water</li>
+          <li>Good</li>
+        </div>
+      </ol>
+      <a href="">New link</a>
     </ol>
+    <div>
+      <p>P1</p>
+      <p>second Paragraph</p>
+    </div>
   </body>
 </html>
