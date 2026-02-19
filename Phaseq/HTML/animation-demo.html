@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            animation-name: anim;
+            animation-duration: 5s;
+            animation-iteration-count: 3;
+            margin-top: 100px;
+        }
+        @keyframes anim {
+          from{
+            background-color: green;
+            width: 200px;
+          }  
+          to{
+            background-color: purple;
+            width: 400px;
+          }
+        }
+        div{
+          width: 150px;
+          height: 150px;
+          background-color: red;
+          position: relative;
+          /* animation-name: anim1;
+          animation-duration: 5s;
+          animation-iteration-count: 3; */
+          animation: anim1 5s ease-in 1s 3 alternate forwards;
+
+        }
+        @keyframes anim1 {
+            0%{background-color: red;left: 0px;top: 0px;}
+            25%{background-color: blue;left: 100px;top: 0px;}
+            75%{background-color: green;left: 0px;top: 100px;}
+            100%{background-color: grey;left: 0px;top: 0px;}
+        }
+    </style>
 </head>
 <body>
-    
+    <h2> CSS Animation</h2>
+    <div></div>
+    <p> Adding keyframes are must for CSS animation. The keyframes 
+        decides the style or animation of the elements at certain times.
+
+    </p>
+
+
 </body>
 </html>
