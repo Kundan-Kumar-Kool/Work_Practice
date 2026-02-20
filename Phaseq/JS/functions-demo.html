@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateTax(amount, rate=20){
+            let tax = amount*(rate/100);
+            return tax;
+        }
+       let myTax = calculateTax(50,10);
+       console.log(myTax)
+       let myTax1 = calculateTax(120,5);
+       console.log(myTax1);
+
+       // func-2
+       function greet(name,greet){
+        let g_message=name+ " "+ greet;
+        return g_message;
+       }
+       console.log(greet("Ram","welcome"));
+       console.log(greet("KK","Good Morning"))
+    </script>
+</body>
+</html>
