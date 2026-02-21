@@ -1,37 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="class1"></div>
     <script>
-        let arr= ["red","blue","green","white","pink"];
-        console.log(arr);
-        console.log(arr[2]);
-        // using array object
-        let colors=new Array(["red","blue","green"]);
-        console.log(colors)
-        let col2= new Array();
-        col2[1]="rainbow";
-        col2[4]="dark-blue";
-        col2[3]="dark-white"
-        console.log(col2);
-        // create an array of 5 numbers.and create fun to print last number of given array.
-        let num=[1,23,53,234,52];
-        function numPrint(num){
-            let len=num.length;
-            console.log(num[len-1]);
+      let arr = ["red", "blue", "green", "white", "pink", "purple"];
+      console.log(arr);
+      console.log(arr[2]);
+      // using array object
+      let colors = new Array(["red", "blue", "green"]);
+      console.log(colors);
+      let col2 = new Array();
+      col2[1] = "rainbow";
+      col2[4] = "dark-blue";
+      col2[3] = "dark-white";
+      console.log(col2);
+      // create an array of 5 numbers.and create fun to print last number of given array.
+      let num = [1, 23, 53, 234, 52];
+      function numPrint(num) {
+        let len = num.length;
+        console.log(num[len - 1]);
+      }
+      numPrint(num);
+      let a1 = [23, "232", 2.353, true, false, NaN, "mohan", 2323232n];
+      console.log(a1);
+      a1.push("Good to see u");
+      a1.unshift(232 + "23232");
+      console.log(a1);
+      // for-each method
+      console.log(Array.isArray(a1));
+      a1.forEach((item, index) => {
+        if (typeof item === "string") {
+          console.log(item.toUpperCase() + " " + index);
+        } else {
+          console.log(item, index);
         }
-        numPrint(num);
-        let a1=[23,"232",2.353,true,false,NaN,"mohan",2323232n];
-        console.log(a1);
-        a1.push("Good to see u");
-        a1.unshift(232+"23232");
-        console.log(a1);
-        
-        
+      });
+      // use for-each to print length of individual colors.
+      arr.forEach((item) => {
+        console.log(item + " length of color is " + item.length);
+      });
+      // using filter method
+      let startW = arr.filter(
+        (item) => item.startsWith("w") || item.startsWith("p"),
+      );
+      console.log(startW);
+      // using map method.
+      let arr2 = arr.map((item) => item.toUpperCase());
+      console.log(arr2);
+      document.getElementsByClassName("class1")[0].innerText = arr2.join(" | ");
+      let combarr = arr.map((item, index) =>
+        arr2[index] ? item + " " + arr2[index] : item,
+      );
+      console.log(combarr);
+      console.log(arr.join(" | "));
+      console.log(arr.find((item) => item === "green"));
+
+      // array of objects
+      const stud = [
+        { id: 1, name: "a", marks: 72, dept: "Math" },
+        { id: 2, name: "b", marks: 45, dept: "Comp. Sci." },
+        { id: 3, name: "c", marks: 88, dept: "Comp. Sci." },
+        { id: 4, name: "d", marks: 30, dept: "Physics" },
+      ];
+      // find and print student with id=3
+      console.log(
+        stud.find((item) => {
+          return item.id === 3;
+        }),
+      );
+      console.log(stud.find((item) => item.id === 3));
+      // filter and print students with marks >=50
+      console.log(stud.filter((item) => item.marks >= 50));
+      // filter computer science
+      console.log(stud.filter((item) => item.dept === "Comp. Sci."));
+
+      //         Method	Returns
+      // find()	First matching object
+      // filter()	Array of all matching objects
+      
     </script>
-</body>
+  </body>
 </html>
