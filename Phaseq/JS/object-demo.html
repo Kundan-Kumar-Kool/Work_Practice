@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let stu={
+            name:"ABC",
+            age:22,
+            email:"abc.@abc.com"
+        }
+        console.log(stu);
+        console.log("Student name is "+stu.name);
+        // other 
+        function ageValidater(obj){
+            if(obj.age>18){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log(ageValidater(stu));
+        let obj1=new Object();
+        obj1.city="Hello_land";
+        obj1.country="Hello_World";
+        console.log(obj1);
+        // other way to create object.
+        let ob=new Object({dream:"Good Man",hobby:"bat Man",class:22,duration:222})
+        console.log(ob);
+
+        // demonstrate obj using fun.
+        function car(name,price,mileage){
+            this.name=name;
+            this.price=price;
+            this.mileage=mileage;
+        }
+        let car1=new car("maruti",23232,53);
+        let car2= new car("honda",53232,321);
+        console.log("car1 name is ",car1.name +", car1 price is ", car1.price)
+
+        // func to compare mileage
+        function mileageComp(obj1,obj2){
+            if (obj1.mileage>obj2.mileage){
+                return obj1.name +" has mileage than "+ obj2.name;
+            }
+            return obj2.name +" has mileage than "+ obj1.name;
+        }
+        console.log(mileageComp(car1,car2));
+    </script>
+</body>
+</html>

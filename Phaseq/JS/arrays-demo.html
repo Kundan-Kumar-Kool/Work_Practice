@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr= ["red","blue","green","white","pink"];
+        console.log(arr);
+        console.log(arr[2]);
+        // using array object
+        let colors=new Array(["red","blue","green"]);
+        console.log(colors)
+        let col2= new Array();
+        col2[1]="rainbow";
+        col2[4]="dark-blue";
+        col2[3]="dark-white"
+        console.log(col2);
+        // create an array of 5 numbers.and create fun to print last number of given array.
+        let num=[1,23,53,234,52];
+        function numPrint(num){
+            let len=num.length;
+            console.log(num[len-1]);
+        }
+        numPrint(num);
+        let a1=[23,"232",2.353,true,false,NaN,"mohan",2323232n];
+        console.log(a1);
+        a1.push("Good to see u");
+        a1.unshift(232+"23232");
+        console.log(a1);
+        
+        
+    </script>
+</body>
+</html>
