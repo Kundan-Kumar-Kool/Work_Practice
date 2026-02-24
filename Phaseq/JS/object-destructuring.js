@@ -1,7 +1,8 @@
 let student1={
     name:"smile",
     age:23,
-    email:"smile123@gmail.com"
+    email:"smile123@gmail.com",
+    card_no:23232532,
 };
 function greet(nm){
     console.log("Hello - greet "+nm)
@@ -29,3 +30,20 @@ function voteEligibility({age}){
     else console.log("You are not eligible to vote may be u are less than 18 as u age is :", age);
 }
 voteEligibility(student1);
+
+// updating object properties.
+
+let student2={
+    ...student1, // here now student2 will get all the data of stu-1
+    
+}
+console.log("student1 ",student1, " student2 ",student2);
+
+let student3={
+    ...student1,
+    name:"Cool",
+    age:19,
+    // email:null, -- here it will simply override the properties.
+    // card_no:null,
+}
+console.log("studnet3 ",student3);
