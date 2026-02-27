@@ -25,3 +25,12 @@ function f(x,y){
 let x=f(2,5);
 console.log(x);
 x(22,55);// here that is being called here, as x is now a function.
+
+// (function)- Immediately Invoked function expression.
+var data;
+(function k(x){
+    console.log(`It's Immediately envoked function ${x} `);
+    data = x;
+})(232);// here it is invoked immediately.
+// k(23233); 
+console.log(`data value is ${data}`); 
