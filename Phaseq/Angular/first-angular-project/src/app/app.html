@@ -13,8 +13,29 @@
 {{student1}} -->
 
 
-<product name="Welcome TV" [price]="74584"></product>
+<product name="Welcome TV" [price]="74584" (event1)="f1($event)" ></product>
+<!-- here f1() is an event funcition that is defined in parent ts file and (event1) is the 
+ listner that is defined in parent one. 
+ and here this $event which is passed inside that will help u to pass the message 
+ that is send from child to parent and it will display that.-->
+<product name="Welcome to Bike World " [price]="96584" (addItem)="onItemAdded($event)"></product>
 <!-- here this [] will help to identify this as number here. -->
+<h3>Items List</h3>
+<ul>
+  <li *ngFor="let item of items">
+    {{item}}
+  </li>
+</ul>
+
+<product (addItem)="onItemAdded($event)"></product>
+<hr>
+<h3>Items List</h3>
+<ul>
+  <li *ngFor="let item of items">
+    {{item}}
+  </li>
+</ul>
+
  <hr>
 <user name="John" [age]="23"></user>
 <user name="Rohan" [age]="16"></user>

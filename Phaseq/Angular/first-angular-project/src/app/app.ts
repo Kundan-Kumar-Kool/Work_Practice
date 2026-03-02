@@ -26,5 +26,17 @@ export class App {
   sayHi():void{
     console.log("Hi");
   }
+  f1(event:any):void{
+    console.log("Got an event1 object from child side and it had a message "+event);
+  }
+  f2(event:any):void{
+    console.log(`Got an event object from child product ${event.name} whose price is ${event.price}`);
+  }
+
+ // this is for the the product to enter.
+ items:string[]=[];
+ onItemAdded(item:string):void{
+  this.items.push(item);
+ }
 
 }

@@ -6,3 +6,11 @@
 <pre>{{User1 | json}}</pre>
 <h1>{{User1.name}}</h1>
 <h1>{{User1.age}}</h1>
+<hr>
+
+<button (click)="messageToParent()">Click on it button.</button>
+<hr>
+<p> This is Regarding adding items for this input box and corresponding button is used here.</p>
+<h3> Add Item</h3>
+<input type = "text" [(ngModel)]="newItem" placeholder="Enter item"/>
+<button (click)="addNewItem()">Add</button>
