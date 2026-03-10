@@ -1,0 +1,56 @@
+<h2>Create a new Product</h2>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Product Name</label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      [ngClass]="{
+        'is-invalid': f['name'].touched && f['name'].invalid,
+        'is-valid': f['name'].touched && f['name'].valid
+      }"
+    />
+
+    <div class="error-message" *ngIf="f['name'].touched && f['name'].invalid">
+      <small *ngIf="f['name'].errors?.['required']">Name is required</small>
+      <small *ngIf="f['name'].errors?.['minlength']">Minimum 3 characters</small>
+    </div>
+  </div>
+  <div>
+    <label for="price">Product Price</label>
+    <input
+      id="price"
+      type="number"
+      formControlName="price"
+      [ngClass]="{
+        'is-invalid': f['price'].touched && f['price'].invalid,
+        'is-valid': f['price'].touched && f['price'].valid
+      }"
+    />
+
+    <div class="error-message" *ngIf="f['price'].touched && f['price'].invalid">
+      <small *ngIf="f['price'].errors?.['required']">Price is required</small>
+      <small *ngIf="f['price'].errors?.['min']">Minimum price is 1</small>
+    </div>
+  </div>
+  
+  <div>
+    <label> Description</label>
+    <textarea rows="10"  formControlName="description" placeholder="Enter product description"></textarea>
+    <div class="error-message" *ngIf="f['description'].touched && f['description'].invalid">
+        <small *ngIf="f['description'].errors?.['minlength']">Mininum 10 characters required</small>
+        <small *ngIf="f['description'].errors?.['maxlength']">Maximum 20 characters required</small>
+    </div>
+  </div>
+
+
+  <button type="submit" [disabled]="productForm.invalid">
+    Add Product
+  </button>
+  <button type="button" (click)="productForm.reset()">
+    Reset
+  </button>
+
+</form>

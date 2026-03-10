@@ -3,10 +3,12 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductComponent } from './components/product/product';
 import { UserComponent } from './components/user/user';
+import { AddProductComponent } from './components/add-product/add-product';
+import { TemplateDrivenFormDemoComponent } from './components/template-driven-form-demo/template-driven-form-demo';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule,ProductComponent,UserComponent],
+  imports: [CommonModule,ProductComponent,UserComponent,AddProductComponent,TemplateDrivenFormDemoComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
